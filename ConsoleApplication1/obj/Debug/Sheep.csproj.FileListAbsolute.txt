@@ -15,3 +15,8 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleA
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\map2.bmp
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Old_Man.png
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Old_ManMirror.png
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Sheep1.png
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Sheep1mirror.png
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Tile.cs

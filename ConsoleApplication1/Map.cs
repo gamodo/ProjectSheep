@@ -10,7 +10,7 @@ using System;
 namespace ProjectSheep{
     class Map{
         Tile[,] tiles;
-        public float TileSize { get { return 40; } }
+        public float TileSize { get { return 50; } }
         public Map(Bitmap mask){
             tiles = new Tile[mask.Width, mask.Height];
             int a = tiles.GetLength(0), b = tiles.GetLength(1);

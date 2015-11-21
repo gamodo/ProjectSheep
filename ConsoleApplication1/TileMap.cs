@@ -10,13 +10,11 @@ namespace ProjectSheep{
     class TileMap : Drawable
     {
 
-        public bool load(string tileset, SFML.Window.Vector2u tileSize, int[] tiles, uint width, uint height){
-
+        public bool load(string tileset, SFML.Window.Vector2u tileSize, int[] tiles, uint width, uint height) {
             m_vertices.PrimitiveType = SFML.Graphics.PrimitiveType.Quads;
             m_vertices.Resize(width * height * 4);
-
-            for (uint i = 0; i < width; ++i){
-                for (uint j = 0; j < height; ++j){
+            for (uint i = 0; i < width; ++i) {
+                for (uint j = 0; j < height; ++j) {
                     int tileNumber = tiles[i + j * width];
 
                     long tu = tileNumber % (m_tileset.Size.X / tileSize.X);
@@ -34,9 +32,9 @@ namespace ProjectSheep{
             return true;
         }
 
-        void Drawable.Draw(SFML.Graphics.RenderTarget target, SFML.Graphics.RenderStates states){
+        void Drawable.Draw(SFML.Graphics.RenderTarget target, SFML.Graphics.RenderStates states) {
             // apply the transform
-            //states.Transform *= getTransform();
+            states.Transform *= Transform.Identity;
 
             // apply the tileset texture
             states.Texture = m_tileset;
@@ -45,10 +43,13 @@ namespace ProjectSheep{
             target.Draw(m_vertices, states);
         }
 
-        public bool IsWalkable(GameObject gobj){
-            return true;
+        public void Draw(RenderWindow win)
+        {
         }
 
+        public bool IsWalkable(GameObject gobj) {
+            return true;
+        }
 
         public SFML.Graphics.Texture m_tileset = new SFML.Graphics.Texture("Bilder/map.bmp");
         private SFML.Graphics.VertexArray m_vertices = new SFML.Graphics.VertexArray();

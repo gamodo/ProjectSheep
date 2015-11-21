@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSheep{
     class Schaf : GameObject{
-        Texture textur2;
+        Texture textur2=new Texture("Bilder/Sheep1.png");
         public Schaf(string direction, Vector2f sPosition){
             textur = new Texture(direction);
             sprite = new Sprite(textur);
