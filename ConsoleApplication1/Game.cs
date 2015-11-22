@@ -7,13 +7,12 @@ using System.Diagnostics;
 
 namespace ProjectSheep{
     class Game {
-        public static Schaf schaf1 { get; set; }
-        public static Schaf schaf2 { get; set; }
         public static Player Player { get; set; }
         public static TileMap map { get; private set; }
         public static GameTime gTime {get; private set;}
         public static View view { get; private set; }
         static Stopwatch watch;
+        static Schafgenerator schafgenerator;
 
         static void Main(string[] args){
                 RenderWindow win = new RenderWindow(new VideoMode(1200,1000), "ProjectSheep",Styles.Default|Styles.Fullscreen);
@@ -30,16 +29,18 @@ namespace ProjectSheep{
         }
         public static bool checkCollision()
         {
-            Vector2f a = new Vector2f(20, 20);
-            Rectangle hBox = new Rectangle((int)Player.sprite.Position.X - 10, (int)Player.sprite.Position.Y - 30, 70, 100);
-            Rectangle hBoxS1 = new Rectangle((int)schaf1.sprite.Position.X, (int)schaf1.sprite.Position.Y - 30, 100, 50);
-            Rectangle hBoxS2 = new Rectangle((int)schaf2.sprite.Position.X, (int)schaf2.sprite.Position.Y - 30, 100, 50);
-            if (hBox.IntersectsWith(hBoxS1) || hBox.IntersectsWith(hBoxS2))
+            Rectangle[] hbox = new Rectangle[100];
+            Rectangle hBoxP = new Rectangle((int)Player.sprite.Position.X - 10, (int)Player.sprite.Position.Y - 30, 70, 100);
+            for (int i= 0;i< 100;i++)
             {
-                Console.WriteLine("Game Over");
-                Console.WriteLine("You survived " + watch.Elapsed.Seconds + " seconds " + watch.Elapsed.Milliseconds + " milliseconds");
-                Console.WriteLine("Press 'n' to restart or 'Esc' to close the game");
-                return true;
+                hbox[i] = new Rectangle((int)Schafgenerator.schafArray[i].sprite.Position.X, (int)Schafgenerator.schafArray[i].sprite.Position.Y - 30, 100, 50);
+                if (hBoxP.IntersectsWith(hbox[i]))
+                {
+                    Console.WriteLine("Game Over");
+                    Console.WriteLine("You survived " + watch.Elapsed.Seconds + " seconds " + watch.Elapsed.Milliseconds + " milliseconds");
+                    Console.WriteLine("Press 'n' to restart or 'Esc' to close the game");
+                    return true;
+                }
             }
             return false;
 
@@ -49,8 +50,6 @@ namespace ProjectSheep{
         {
             watch.Restart();
             Player.sprite.Position = new Vector2f(600, 900);
-            schaf1.sprite.Position = new Vector2f(20, 900);
-            schaf2.sprite.Position = new Vector2f(900, 900);
         }
 
 
@@ -63,8 +62,7 @@ namespace ProjectSheep{
             map.load("Bilder/background.bmp", new Vector2u(1200,1000), level, (uint)50, (uint)50);
             gTime = new GameTime();
             Player = new Player(new Vector2f(600, 900));
-            schaf1 = new Schaf(new Vector2f(20,900));
-            schaf2 = new Schaf(new Vector2f(900,900));
+            schafgenerator = new Schafgenerator(1);
             view = new View();
             watch = new Stopwatch();
             watch.Start();
@@ -73,8 +71,7 @@ namespace ProjectSheep{
         static void Draw(RenderWindow window){
             window.Clear(new SFML.Graphics.Color(100, 100, 100));
             window.Draw(map);
-            schaf1.Draw(window);
-            schaf2.Draw(window);
+            schafgenerator.Draw(window);
             Player.Draw(window);
             window.Display();
             window.SetView(view);
@@ -82,8 +79,7 @@ namespace ProjectSheep{
 
         static void Update(){
             gTime.Update();
-            schaf1.Update(gTime);
-            schaf2.Update(gTime);
+            schafgenerator.Update(gTime);
             Player.Update(gTime);
         }
     }
