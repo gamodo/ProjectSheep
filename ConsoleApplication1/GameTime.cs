@@ -22,24 +22,3 @@ namespace ProjectSheep{
         }
     }
 }
-//class GameTime
-//{
-//    Stopwatch watch;
-//    public TimeSpan Ellapsed { get; private set; }
-//    public TimeSpan Total { get; private set; }
-
-//    public GameTime()
-//    {
-//        watch = new Stopwatch();
-//        Ellapsed = new TimeSpan();
-//        Total = new TimeSpan();
-
-//        watch.Start();
-//    }
-
-//    public void Update()
-//    {
-//        Ellapsed = watch.Elapsed - Total;
-//        Total = watch.Elapsed;
-//    }
-//}
