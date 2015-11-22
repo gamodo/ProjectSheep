@@ -22,15 +22,15 @@ namespace ProjectSheep{
         public float jumppos;
         public bool jumpstate;
         public Player(Vector2f startPosition) {
-            textur = new Texture("Bilder/Old_Man.png");
-            textur2 = new Texture("Bilder/Old_ManMirror.png");
-            texturAtt = new Texture("Bilder/Old_Man.png");
-            texturAtt2 = new Texture("Bilder/Old_ManMirror.png");
-            texturJump = new Texture("Bilder/Old_Man.png");
-            texturJump2 = new Texture("Bilder/Old_ManMirror.png");
+            textur = new Texture("Bilder/oldman.png");
+            textur2 = new Texture("Bilder/oldman.png");
+            texturAtt = new Texture("Bilder/oldman.png");
+            texturAtt2 = new Texture("Bilder/oldman.png");
+            texturJump = new Texture("Bilder/oldman.png");
+            texturJump2 = new Texture("Bilder/oldman.png");
             sprite = new Sprite(textur);
             sprite.Position = startPosition;
-            baseMovementSpeed = 0.5f;
+            baseMovementSpeed = 0.4f;
             sprite.Scale = new Vector2f(0.2f, 0.2f);
             isAttacking = false;
             jumpheight = 0;

@@ -13,7 +13,7 @@ namespace ProjectSheep{
         public Schaf(Vector2f sPosition){
             textur = new Texture("Bilder/Sheep1mirror.png");
             sprite = new Sprite(textur);
-            baseMovementSpeed = 0.1f;
+            baseMovementSpeed = 0.2f;
             sprite.Position = sPosition;
             sprite.Scale = new Vector2f(0.2f, 0.2f);
         }

@@ -21,3 +21,24 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleA
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Sheep1mirror.png
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\background.bmp
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\background.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\background.bmp
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\background.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\map.bmp
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\map2.bmp
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\Old_Man.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\Old_ManMirror.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\Sheep1.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\Sheep1mirror.png
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\map.xcf
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\csfml-audio-2.dll
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\csfml-graphics-2.dll
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\csfml-window-2.dll
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\libsndfile-1.dll
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\openal32.dll
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\obj\Debug\Sheep.csprojResolveAssemblyReference.cache
+C:\Users\Basti\Desktop\ProjectSheep2\ConsoleApplication1\bin\Debug\Bilder\oldman.png
