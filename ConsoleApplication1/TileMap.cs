@@ -51,7 +51,7 @@ namespace ProjectSheep{
             return true;
         }
 
-        public SFML.Graphics.Texture m_tileset = new SFML.Graphics.Texture("Bilder/map.bmp");
+        public SFML.Graphics.Texture m_tileset = new SFML.Graphics.Texture("Bilder/background.bmp");
         private SFML.Graphics.VertexArray m_vertices = new SFML.Graphics.VertexArray();
 
     }

@@ -15,7 +15,7 @@ namespace ProjectSheep{
             sprite = new Sprite(textur);
             baseMovementSpeed = 0.1f;
             sprite.Position = sPosition;
-            sprite.Scale = new Vector2f(0.5f, 0.5f);
+            sprite.Scale = new Vector2f(0.2f, 0.2f);
         }
         protected void Animate(GameTime gTime){
             if (MovingDirection.X>0)

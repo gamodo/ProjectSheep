@@ -48,9 +48,9 @@ namespace ProjectSheep{
         public static void resetComponents()
         {
             watch.Restart();
-            Player.sprite.Position = new Vector2f(500, 500);
-            schaf1.sprite.Position = new Vector2f(900, 5);
-            schaf2.sprite.Position = new Vector2f(100, 5);
+            Player.sprite.Position = new Vector2f(600, 900);
+            schaf1.sprite.Position = new Vector2f(20, 900);
+            schaf2.sprite.Position = new Vector2f(900, 900);
         }
 
 
@@ -60,11 +60,11 @@ namespace ProjectSheep{
                 level[i] = 0;
             }
             map = new TileMap();
-            map.load("Bilder/map.bmp", new Vector2u(1200,1000), level, (uint)50, (uint)50);
+            map.load("Bilder/background.bmp", new Vector2u(1200,1000), level, (uint)50, (uint)50);
             gTime = new GameTime();
-            Player = new Player(new Vector2f(500, 950));
-            schaf1 = new Schaf(new Vector2f(20,950));
-            schaf2 = new Schaf(new Vector2f(900,950));
+            Player = new Player(new Vector2f(600, 900));
+            schaf1 = new Schaf(new Vector2f(20,900));
+            schaf2 = new Schaf(new Vector2f(900,900));
             view = new View();
             watch = new Stopwatch();
             watch.Start();

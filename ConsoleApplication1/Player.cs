@@ -17,8 +17,10 @@ namespace ProjectSheep{
         public bool isAttacking;
         public Stopwatch jumpwatch = new Stopwatch();
         public Stopwatch attwatch = new Stopwatch();
-        private float jumpHeight;
         private bool isJumping;
+        public float jumpheight;
+        public float jumppos;
+        public bool jumpstate;
         public Player(Vector2f startPosition) {
             textur = new Texture("Bilder/Old_Man.png");
             textur2 = new Texture("Bilder/Old_ManMirror.png");
@@ -31,7 +33,9 @@ namespace ProjectSheep{
             baseMovementSpeed = 0.5f;
             sprite.Scale = new Vector2f(0.2f, 0.2f);
             isAttacking = false;
-            jumpHeight = 0;
+            jumpheight = 0;
+            jumppos = 0;
+            jumpstate = false;
         }
         void KeyboardInput()
         {
@@ -41,7 +45,7 @@ namespace ProjectSheep{
                 {
                     isJumping = true;
                     MovingDirection = new Vector2f(MovingDirection.X, -1);
-                    jumpwatch.Restart();
+                    jumppos = sprite.Position.Y;
                 }
             }
             else if (Keyboard.IsKeyPressed(Keyboard.Key.A))
@@ -102,29 +106,35 @@ namespace ProjectSheep{
                 sprite.Texture = texturAtt2;
         }
 
-        public void Jump()
+        public void Jump(GameTime gTime)
         {
-            if (jumpwatch.ElapsedMilliseconds < 1000)
+            if (jumpheight < 350 && jumpstate == false)
             {
-
                 MovingDirection = new Vector2f(MovingDirection.X, -1);
+                jumpheight = jumppos-sprite.Position.Y;
+                if(jumpheight>345)jumpstate = true;
             }
-            else if (jumpwatch.ElapsedMilliseconds < 2000)
+            else if (jumpheight>0)
             {
                 MovingDirection = new Vector2f(MovingDirection.X, 1);
+                jumpheight = jumppos - sprite.Position.Y;
+                movementSpeedY = baseMovementSpeed * gTime.Ellapsed.Milliseconds * 1.5f; ;
             }
             else
             {
                 MovingDirection = new Vector2f(MovingDirection.X, 0);
-                jumpwatch.Reset();
                 isJumping = false;
+                jumpheight = 0;
+                jumppos = 0;
+                jumpstate = false;
+                movementSpeedY = 0;
             }
         }
         public override void Update(GameTime gTime){
             movementSpeedX = baseMovementSpeed * gTime.Ellapsed.Milliseconds;
             movementSpeedY = baseMovementSpeed * gTime.Ellapsed.Milliseconds;
             KeyboardInput();
-            if (isJumping) Jump();
+            if (isJumping)Jump(gTime);
             Move();
             if (isMoving)
                 Animate(gTime);

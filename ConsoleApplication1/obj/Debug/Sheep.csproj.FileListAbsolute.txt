@@ -19,3 +19,5 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleA
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Old_ManMirror.png
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Sheep1.png
 C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\Sheep1mirror.png
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\background.bmp
+C:\Users\User\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Bilder\background.png
