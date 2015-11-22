@@ -10,22 +10,23 @@ using System.Threading.Tasks;
 namespace ProjectSheep{
     class Schaf : GameObject{
         Texture textur2=new Texture("Bilder/Sheep1.png");
-        public Schaf(string direction, Vector2f sPosition){
-            textur = new Texture(direction);
+        public Schaf(Vector2f sPosition){
+            textur = new Texture("Bilder/Sheep1mirror.png");
             sprite = new Sprite(textur);
-            baseMovementSpeed = 0.05f;
+            baseMovementSpeed = 0.1f;
             sprite.Position = sPosition;
             sprite.Scale = new Vector2f(0.5f, 0.5f);
         }
         protected void Animate(GameTime gTime){
-            if (gTime.Total.Milliseconds % 1000 < 500)
+            if (MovingDirection.X>0)
                 sprite.Texture = textur;
             else
                 sprite.Texture = textur2;
         }
         public override void Update(GameTime gTime){
-            movementSpeed = baseMovementSpeed * gTime.Ellapsed.Milliseconds;
-            MovingDirection = new Vector2f(Game.Player.Position.X - sprite.Position.X,0);
+            movementSpeedX = baseMovementSpeed * gTime.Ellapsed.Milliseconds;
+            if (Game.Player.Position.X > sprite.Position.X) MovingDirection = new Vector2f(1, 0);
+            else MovingDirection = new Vector2f(-1, 0);
             Move();
             if (isMoving)
                 Animate(gTime);
